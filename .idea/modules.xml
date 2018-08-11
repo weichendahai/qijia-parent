@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/qijia-framework/qijia-framework.iml" filepath="$PROJECT_DIR$/qijia-framework/qijia-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-parent.iml" filepath="$PROJECT_DIR$/qijia-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-spring-boot-starters-parent/qijia-spring-boot-starters-parent.iml" filepath="$PROJECT_DIR$/qijia-spring-boot-starters-parent/qijia-spring-boot-starters-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-utils/qijia-utils.iml" filepath="$PROJECT_DIR$/qijia-utils/qijia-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-api/shop-admin-api.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-api/shop-admin-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-common/shop-admin-common.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-common/shop-admin-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-dao/shop-admin-dao.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-dao/shop-admin-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-gateway/shop-admin-gateway.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-gateway/shop-admin-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-model/shop-admin-model.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-model/shop-admin-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-sdk/shop-admin-sdk.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-sdk/shop-admin-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-views/shop-admin-views.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-views/shop-admin-views.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-web/shop-admin-web.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-web/shop-admin-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-work/shop-admin-work.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-work/shop-admin-work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-demo/shop-demo.iml" filepath="$PROJECT_DIR$/shop-demo/shop-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools-parent/tools-parent.iml" filepath="$PROJECT_DIR$/tools-parent/tools-parent.iml" />
+    </modules>
+  </component>
+</project>

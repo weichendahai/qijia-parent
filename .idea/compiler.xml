@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="qijia-framework" />
+        <module name="qijia-spring-boot-starters-parent" />
+        <module name="qijia-utils" />
+        <module name="shop-admin-api" />
+        <module name="shop-admin-common" />
+        <module name="shop-admin-dao" />
+        <module name="shop-admin-gateway" />
+        <module name="shop-admin-model" />
+        <module name="shop-admin-sdk" />
+        <module name="shop-admin-views" />
+        <module name="shop-admin-web" />
+        <module name="tools-parent" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="qijia-framework" target="1.5" />
+      <module name="qijia-parent" target="1.5" />
+      <module name="qijia-spring-boot-starters-parent" target="1.5" />
+      <module name="qijia-utils" target="1.5" />
+      <module name="shop-admin" target="1.5" />
+      <module name="shop-admin-api" target="1.5" />
+      <module name="shop-admin-common" target="1.5" />
+      <module name="shop-admin-dao" target="1.5" />
+      <module name="shop-admin-gateway" target="1.5" />
+      <module name="shop-admin-model" target="1.5" />
+      <module name="shop-admin-sdk" target="1.5" />
+      <module name="shop-admin-views" target="1.5" />
+      <module name="shop-admin-web" target="1.5" />
+      <module name="tools-parent" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
+  </component>
+</project>

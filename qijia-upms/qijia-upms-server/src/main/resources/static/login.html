@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <!-- 引入vue -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
+    <!-- 引入 axios 用于ajax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <el-row :gutter="20">
+        <el-col :span="8" :offset="8">
+            <el-form label-width="100px" class="demo-ruleForm">
+                <el-form-item label="用户名" prop="username">
+                    <el-input model="loginData.username"></el-input>
+                </el-form-item>
+                <el-form-item label="密码" prop="password">
+                    <el-input model="loginData.password" type="password"></el-input>
+                </el-form-item>
+                <el-form-item>
+                    <el-button type="primary" @click="login()">登录</el-button>
+                    <el-button>取消</el-button>
+                </el-form-item>
+            </el-form>
+        </el-col>
+    </el-row>
+</div>
+</body>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            loginData: {
+                username: "admin",
+                password: "123456",
+                rememberMe: false,
+                backurl:"/"
+
+            }
+        },
+        methods: {
+            login: function () {
+
+                if (this.getQueryString("backurl") != null) {
+                    this.loginData.backurl = this.getQueryString("backurl");
+                }
+
+                var params = {
+                    username: this.loginData.username,
+                    password: this.loginData.password,
+                    rememberMe: this.loginData.rememberMe,
+                    backurl: this.loginData.backurl
+                }
+                axios.post('/sso/login', params)
+                    .then(function (response) {
+                        console.log(response);
+                        //{"code":1,"message":"success","data":"http://127.0.0.1:18520/api/v1/manage/product/index"}
+                        if (response.data.code == 1) {
+                            location.href = response.data.data;
+                        } else {
+                            alert("登录失败!" + response.data.message);
+                        }
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                        alert("登录失败" + error);
+
+                    });
+            },
+            getQueryString: function GetQueryString(name) {
+                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if(r!=null) {
+                    return  unescape(r[2]);
+                }
+                return null;
+
+            }
+        },
+    })
+</script>
+</html>

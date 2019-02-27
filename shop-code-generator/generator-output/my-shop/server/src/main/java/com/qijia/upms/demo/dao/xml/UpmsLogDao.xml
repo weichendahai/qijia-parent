@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qijia.upms.dao.UpmsLogDao">
+
+	<!--基础返回结果-->
+	<resultMap id="BaseResultMap" type="com.qijia.upms.model.UpmsLog">
+		<id property="id" column="id" jdbcType="INTEGER"/>
+		<result property="description" column="description" jdbcType="VARCHAR"/>
+		<result property="username" column="username" jdbcType="VARCHAR"/>
+		<result property="startTime" column="start_time" jdbcType="BIGINT"/>
+		<result property="spendTime" column="spend_time" jdbcType="INTEGER"/>
+		<result property="basePath" column="base_path" jdbcType="VARCHAR"/>
+		<result property="uri" column="uri" jdbcType="VARCHAR"/>
+		<result property="url" column="url" jdbcType="VARCHAR"/>
+		<result property="method" column="method" jdbcType="VARCHAR"/>
+		<result property="parameter" column="parameter" jdbcType="LONGVARCHAR"/>
+		<result property="userAgent" column="user_agent" jdbcType="VARCHAR"/>
+		<result property="ip" column="ip" jdbcType="VARCHAR"/>
+		<result property="result" column="result" jdbcType="LONGVARCHAR"/>
+		<result property="permissions" column="permissions" jdbcType="VARCHAR"/>
+		<result property="createTime" column="create_time" jdbcType="BIGINT"/>
+		<result property="updateTime" column="update_time" jdbcType="BIGINT"/>
+	</resultMap>
+
+	<!-- 查询条件 -->
+    <sql id="Base_Where_Clause">
+    	where 1=1
+    	<trim  suffixOverrides="," >
+			<if test="id != null and id != ''">
+				and id = #{id, jdbcType=INTEGER }
+			</if>
+			<if test="description != null and description != ''">
+				and description = #{description, jdbcType=VARCHAR }
+			</if>
+			<if test="username != null and username != ''">
+				and username = #{username, jdbcType=VARCHAR }
+			</if>
+			<if test="startTime != null and startTime != ''">
+				and start_time = #{startTime, jdbcType=BIGINT }
+			</if>
+			<if test="spendTime != null and spendTime != ''">
+				and spend_time = #{spendTime, jdbcType=INTEGER }
+			</if>
+			<if test="basePath != null and basePath != ''">
+				and base_path = #{basePath, jdbcType=VARCHAR }
+			</if>
+			<if test="uri != null and uri != ''">
+				and uri = #{uri, jdbcType=VARCHAR }
+			</if>
+			<if test="url != null and url != ''">
+				and url = #{url, jdbcType=VARCHAR }
+			</if>
+			<if test="method != null and method != ''">
+				and method = #{method, jdbcType=VARCHAR }
+			</if>
+			<if test="parameter != null and parameter != ''">
+				and parameter = #{parameter, jdbcType=LONGVARCHAR }
+			</if>
+			<if test="userAgent != null and userAgent != ''">
+				and user_agent = #{userAgent, jdbcType=VARCHAR }
+			</if>
+			<if test="ip != null and ip != ''">
+				and ip = #{ip, jdbcType=VARCHAR }
+			</if>
+			<if test="result != null and result != ''">
+				and result = #{result, jdbcType=LONGVARCHAR }
+			</if>
+			<if test="permissions != null and permissions != ''">
+				and permissions = #{permissions, jdbcType=VARCHAR }
+			</if>
+			<if test="createTime != null and createTime != ''">
+				and create_time = #{createTime, jdbcType=BIGINT }
+			</if>
+			<if test="updateTime != null and updateTime != ''">
+				and update_time = #{updateTime, jdbcType=BIGINT }
+			</if>
+		</trim>
+    </sql>
+
+	<!--添加-->
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id"
+		parameterType="com.qijia.upms.model.UpmsLog">
+		insert into upms_log
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="description != null">
+				description,
+			</if>
+			<if test="username != null">
+				username,
+			</if>
+			<if test="startTime != null">
+				start_time,
+			</if>
+			<if test="spendTime != null">
+				spend_time,
+			</if>
+			<if test="basePath != null">
+				base_path,
+			</if>
+			<if test="uri != null">
+				uri,
+			</if>
+			<if test="url != null">
+				url,
+			</if>
+			<if test="method != null">
+				method,
+			</if>
+			<if test="parameter != null">
+				parameter,
+			</if>
+			<if test="userAgent != null">
+				user_agent,
+			</if>
+			<if test="ip != null">
+				ip,
+			</if>
+			<if test="result != null">
+				result,
+			</if>
+			<if test="permissions != null">
+				permissions,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="updateTime != null">
+				update_time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id, jdbcType=INTEGER},
+			</if>
+			<if test="description != null">
+				#{description, jdbcType=VARCHAR},
+			</if>
+			<if test="username != null">
+				#{username, jdbcType=VARCHAR},
+			</if>
+			<if test="startTime != null">
+				#{startTime, jdbcType=BIGINT},
+			</if>
+			<if test="spendTime != null">
+				#{spendTime, jdbcType=INTEGER},
+			</if>
+			<if test="basePath != null">
+				#{basePath, jdbcType=VARCHAR},
+			</if>
+			<if test="uri != null">
+				#{uri, jdbcType=VARCHAR},
+			</if>
+			<if test="url != null">
+				#{url, jdbcType=VARCHAR},
+			</if>
+			<if test="method != null">
+				#{method, jdbcType=VARCHAR},
+			</if>
+			<if test="parameter != null">
+				#{parameter, jdbcType=LONGVARCHAR},
+			</if>
+			<if test="userAgent != null">
+				#{userAgent, jdbcType=VARCHAR},
+			</if>
+			<if test="ip != null">
+				#{ip, jdbcType=VARCHAR},
+			</if>
+			<if test="result != null">
+				#{result, jdbcType=LONGVARCHAR},
+			</if>
+			<if test="permissions != null">
+				#{permissions, jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				#{createTime, jdbcType=BIGINT},
+			</if>
+			<if test="updateTime != null">
+				#{updateTime, jdbcType=BIGINT},
+			</if>
+		</trim>
+	</insert>
+
+	<!--删除-->
+	<delete id="delete" parameterType="Object">
+		delete from upms_log
+		where
+		id = #{id}
+	</delete>
+
+	<!--修改-->
+	<update id="update" parameterType="com.qijia.upms.model.UpmsLog">
+		update upms_log
+		<set>
+			<if test="description != null">
+				description = #{description, jdbcType=VARCHAR },
+			</if>
+			<if test="username != null">
+				username = #{username, jdbcType=VARCHAR },
+			</if>
+			<if test="startTime != null">
+				start_time = #{startTime, jdbcType=BIGINT },
+			</if>
+			<if test="spendTime != null">
+				spend_time = #{spendTime, jdbcType=INTEGER },
+			</if>
+			<if test="basePath != null">
+				base_path = #{basePath, jdbcType=VARCHAR },
+			</if>
+			<if test="uri != null">
+				uri = #{uri, jdbcType=VARCHAR },
+			</if>
+			<if test="url != null">
+				url = #{url, jdbcType=VARCHAR },
+			</if>
+			<if test="method != null">
+				method = #{method, jdbcType=VARCHAR },
+			</if>
+			<if test="parameter != null">
+				parameter = #{parameter, jdbcType=LONGVARCHAR },
+			</if>
+			<if test="userAgent != null">
+				user_agent = #{userAgent, jdbcType=VARCHAR },
+			</if>
+			<if test="ip != null">
+				ip = #{ip, jdbcType=VARCHAR },
+			</if>
+			<if test="result != null">
+				result = #{result, jdbcType=LONGVARCHAR },
+			</if>
+			<if test="permissions != null">
+				permissions = #{permissions, jdbcType=VARCHAR },
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime, jdbcType=BIGINT },
+			</if>
+			<if test="updateTime != null">
+				update_time = #{updateTime, jdbcType=BIGINT },
+			</if>
+		</set>
+		where
+		id = #{id}
+	</update>
+
+	<!-- 用于select查询公用抽取的列 -->
+	<sql id="Base_Column_List">
+		id,description,username,start_time,spend_time,base_path,uri,url,method,parameter,user_agent,ip,result,permissions,create_time,update_time
+	</sql>
+
+	<!--根据Id查询-->
+	<select id="queryById" parameterType="int" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from upms_log
+		where
+		id = #{id}
+	</select>
+
+	<!--根据model 查询-->
+    <select id="queryOne" resultMap="BaseResultMap"  parameterType="Object">
+        select <include refid="Base_Column_List"/>
+        from upms_log
+        <include refid="Base_Where_Clause"/>
+        limit 1
+    </select>
+
+	<!--根据model 查询; 返回list 结果-->
+    <select id="queryByObject" resultMap="BaseResultMap"  parameterType="Object">
+        select <include refid="Base_Column_List"/>
+        from upms_log
+        <include refid="Base_Where_Clause"/>
+    </select>
+
+	<!--查询全部-->
+	<select id="queryAll" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from upms_log
+	</select>
+
+	<!--
+    查询条件;根据具体业务逻辑实现查询；默认查询条件与字段名字相同；保存至map
+    例如
+        Map<String, Object> filter = new HashMap<String, Object>();
+        filter.put("id", localeRequest.getId());
+        filter.put("name", localeRequest.getName());
+     -->
+	<sql id="Filter_Where_Clause">
+		where 1=1
+		<trim  suffixOverrides="," >
+			<if test="id != null and id != ''">
+				and id = #{id, jdbcType=INTEGER }
+			</if>
+			<if test="description != null and description != ''">
+				and description = #{description, jdbcType=VARCHAR }
+			</if>
+			<if test="username != null and username != ''">
+				and username = #{username, jdbcType=VARCHAR }
+			</if>
+			<if test="start_time != null and start_time != ''">
+				and start_time = #{start_time, jdbcType=BIGINT }
+			</if>
+			<if test="spend_time != null and spend_time != ''">
+				and spend_time = #{spend_time, jdbcType=INTEGER }
+			</if>
+			<if test="base_path != null and base_path != ''">
+				and base_path = #{base_path, jdbcType=VARCHAR }
+			</if>
+			<if test="uri != null and uri != ''">
+				and uri = #{uri, jdbcType=VARCHAR }
+			</if>
+			<if test="url != null and url != ''">
+				and url = #{url, jdbcType=VARCHAR }
+			</if>
+			<if test="method != null and method != ''">
+				and method = #{method, jdbcType=VARCHAR }
+			</if>
+			<if test="parameter != null and parameter != ''">
+				and parameter = #{parameter, jdbcType=LONGVARCHAR }
+			</if>
+			<if test="user_agent != null and user_agent != ''">
+				and user_agent = #{user_agent, jdbcType=VARCHAR }
+			</if>
+			<if test="ip != null and ip != ''">
+				and ip = #{ip, jdbcType=VARCHAR }
+			</if>
+			<if test="result != null and result != ''">
+				and result = #{result, jdbcType=LONGVARCHAR }
+			</if>
+			<if test="permissions != null and permissions != ''">
+				and permissions = #{permissions, jdbcType=VARCHAR }
+			</if>
+			<if test="create_time != null and create_time != ''">
+				and create_time = #{create_time, jdbcType=BIGINT }
+			</if>
+			<if test="update_time != null and update_time != ''">
+				and update_time = #{update_time, jdbcType=BIGINT }
+			</if>
+		</trim>
+	</sql>
+
+	<!--根据map 查询条件查询-->
+	<select id="queryByList" resultMap="BaseResultMap"  parameterType="java.util.Map">
+		select <include refid="Base_Column_List"/>
+		from upms_log
+		<include refid="Filter_Where_Clause"/>
+	</select>
+</mapper>

@@ -2,10 +2,36 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/qijia-spring-boot-starters-parent/app-mybatis-plus-spring-boot-starter-parent/app-mybatis-plus-spring-boot-autoconfigure/app-mybatis-plus-spring-boot-autoconfigure.iml" filepath="$PROJECT_DIR$/qijia-spring-boot-starters-parent/app-mybatis-plus-spring-boot-starter-parent/app-mybatis-plus-spring-boot-autoconfigure/app-mybatis-plus-spring-boot-autoconfigure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-spring-boot-starters-parent/app-mybatis-plus-spring-boot-starter-parent/app-mybatis-plus-spring-boot-starter/app-mybatis-plus-spring-boot-starter.iml" filepath="$PROJECT_DIR$/qijia-spring-boot-starters-parent/app-mybatis-plus-spring-boot-starter-parent/app-mybatis-plus-spring-boot-starter/app-mybatis-plus-spring-boot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-spring-boot-starters-parent/app-mybatis-plus-spring-boot-starter-parent/app-mybatis-plus-spring-boot-starter-parent.iml" filepath="$PROJECT_DIR$/qijia-spring-boot-starters-parent/app-mybatis-plus-spring-boot-starter-parent/app-mybatis-plus-spring-boot-starter-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-spring-boot-starters-parent/app-mybatis-plus-srping-boot-starter-parent/app-mybatis-plus-srping-boot-autoconfigure/app-mybatis-plus-srping-boot-autoconfiguer.iml" filepath="$PROJECT_DIR$/qijia-spring-boot-starters-parent/app-mybatis-plus-srping-boot-starter-parent/app-mybatis-plus-srping-boot-autoconfigure/app-mybatis-plus-srping-boot-autoconfiguer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-spring-boot-starters-parent/druid-spring-boot-starter-parent/druid-spring-boot-autoconfigure/druid-spring-boot-autoconfigure.iml" filepath="$PROJECT_DIR$/qijia-spring-boot-starters-parent/druid-spring-boot-starter-parent/druid-spring-boot-autoconfigure/druid-spring-boot-autoconfigure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-spring-boot-starters-parent/druid-spring-boot-starter-parent/druid-spring-boot-starter/druid-spring-boot-starter.iml" filepath="$PROJECT_DIR$/qijia-spring-boot-starters-parent/druid-spring-boot-starter-parent/druid-spring-boot-starter/druid-spring-boot-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-spring-boot-starters-parent/druid-spring-boot-starter-parent/druid-spring-boot-starter-parent.iml" filepath="$PROJECT_DIR$/qijia-spring-boot-starters-parent/druid-spring-boot-starter-parent/druid-spring-boot-starter-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-common/qijia-common.iml" filepath="$PROJECT_DIR$/qijia-common/qijia-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-common/qijia-common-redis/qijia-common-redis.iml" filepath="$PROJECT_DIR$/qijia-common/qijia-common-redis/qijia-common-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-common/qijia-common-utils/qijia-common-utils.iml" filepath="$PROJECT_DIR$/qijia-common/qijia-common-utils/qijia-common-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/qijia-framework/qijia-framework.iml" filepath="$PROJECT_DIR$/qijia-framework/qijia-framework.iml" />
       <module fileurl="file://$PROJECT_DIR$/qijia-parent.iml" filepath="$PROJECT_DIR$/qijia-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-rabbitmq/qijia-rabbitmq.iml" filepath="$PROJECT_DIR$/qijia-rabbitmq/qijia-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-register-center/qijia-register-center.iml" filepath="$PROJECT_DIR$/qijia-register-center/qijia-register-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-shop/qijia-shop.iml" filepath="$PROJECT_DIR$/qijia-shop/qijia-shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-shop/qijia-shop-admin/qijia-shop-admin.iml" filepath="$PROJECT_DIR$/qijia-shop/qijia-shop-admin/qijia-shop-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/qijia-spring-boot-starters-parent/qijia-spring-boot-starters-parent.iml" filepath="$PROJECT_DIR$/qijia-spring-boot-starters-parent/qijia-spring-boot-starters-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/qijia-utils/qijia-utils.iml" filepath="$PROJECT_DIR$/qijia-utils/qijia-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-upms/qijia-upms.iml" filepath="$PROJECT_DIR$/qijia-upms/qijia-upms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-upms/qijia-upms-client/qijia-upms-client.iml" filepath="$PROJECT_DIR$/qijia-upms/qijia-upms-client/qijia-upms-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-upms/qijia-upms-common/qijia-upms-common.iml" filepath="$PROJECT_DIR$/qijia-upms/qijia-upms-common/qijia-upms-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-upms/qijia-upms-dao/qijia-upms-dao.iml" filepath="$PROJECT_DIR$/qijia-upms/qijia-upms-dao/qijia-upms-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-upms/qijia-upms-model/qijia-upms-model.iml" filepath="$PROJECT_DIR$/qijia-upms/qijia-upms-model/qijia-upms-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-upms/qijia-upms-rpc-api/qijia-upms-rpc-api.iml" filepath="$PROJECT_DIR$/qijia-upms/qijia-upms-rpc-api/qijia-upms-rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-upms/qijia-upms-rpc-service/qijia-upms-rpc-service.iml" filepath="$PROJECT_DIR$/qijia-upms/qijia-upms-rpc-service/qijia-upms-rpc-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-upms/qijia-upms-server/qijia-upms-server.iml" filepath="$PROJECT_DIR$/qijia-upms/qijia-upms-server/qijia-upms-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-rabbitmq/rabbitmq-api/rabbitmq-api.iml" filepath="$PROJECT_DIR$/qijia-rabbitmq/rabbitmq-api/rabbitmq-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-rabbitmq/rabbitmq-spring/rabbitmq-spring.iml" filepath="$PROJECT_DIR$/qijia-rabbitmq/rabbitmq-spring/rabbitmq-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-rabbitmq/rabbitmq-springboot-consumer/rabbitmq-springboot-consumer.iml" filepath="$PROJECT_DIR$/qijia-rabbitmq/rabbitmq-springboot-consumer/rabbitmq-springboot-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qijia-rabbitmq/rabbitmq-springboot-producer/rabbitmq-springboot-producer.iml" filepath="$PROJECT_DIR$/qijia-rabbitmq/rabbitmq-springboot-producer/rabbitmq-springboot-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shiro-login-web/shiro-login-web.iml" filepath="$PROJECT_DIR$/shiro-login-web/shiro-login-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-api/shop-admin-api.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-api/shop-admin-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-common/shop-admin-common.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-common/shop-admin-common.iml" />
@@ -16,7 +42,10 @@
       <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-views/shop-admin-views.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-views/shop-admin-views.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-web/shop-admin-web.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-web/shop-admin-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-admin/shop-admin-work/shop-admin-work.iml" filepath="$PROJECT_DIR$/shop-admin/shop-admin-work/shop-admin-work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-code-generator/shop-code-generator.iml" filepath="$PROJECT_DIR$/shop-code-generator/shop-code-generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop-demo/shop-demo.iml" filepath="$PROJECT_DIR$/shop-demo/shop-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-login/shop-login.iml" filepath="$PROJECT_DIR$/shop-login/shop-login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-test/shop-test.iml" filepath="$PROJECT_DIR$/shop-test/shop-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/tools-parent/tools-parent.iml" filepath="$PROJECT_DIR$/tools-parent/tools-parent.iml" />
     </modules>
   </component>

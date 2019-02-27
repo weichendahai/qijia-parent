@@ -4,18 +4,322 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.weichen</groupId>
+    <groupId>com.qijia</groupId>
     <artifactId>qijia-parent</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>qijia-utils</module>
+        <!--<module>qijia-utils</module>-->
         <module>qijia-framework</module>
         <module>qijia-spring-boot-starters-parent</module>
         <module>tools-parent</module>
         <module>shop-admin</module>
         <module>shop-demo</module>
+        <module>shop-login</module>
+        <module>shiro-login-web</module>
+        <module>shop-code-generator</module>
+        <module>qijia-upms</module>
+        <module>qijia-register-center</module>
+        <module>qijia-common</module>
+        <module>qijia-shop</module>
+        <module>shop-test</module>
+        <module>qijia-rabbitmq</module>
     </modules>
 
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.10.RELEASE</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+
+        <com.qijia.jar.version>1.0-SNAPSHOT</com.qijia.jar.version>
+
+
+        <io.netty.version>4.1.22.Final</io.netty.version>
+        <org.redisson.version>3.6.2</org.redisson.version>
+
+        <mysql.connector.java.version>5.1.20</mysql.connector.java.version>
+        <com.github.pagehelper.version>1.2.3</com.github.pagehelper.version>
+
+        <spring.boot.autoconfigure.version>1.5.10.RELEASE</spring.boot.autoconfigure.version>
+        <spring.boot.configuration.processor.version>1.5.10.RELEASE</spring.boot.configuration.processor.version>
+
+        <!--<spring.cloud.starter.stream.rabbit.version>1.2.1.RELEASE</spring.cloud.starter.stream.rabbit.version>-->
+
+        <org.slf4j.api.version>1.7.25</org.slf4j.api.version>
+        <org.slf4j.log4j12.version>1.7.25</org.slf4j.log4j12.version>
+        <log4j.version>1.2.17</log4j.version>
+
+        <!--升级为3.5.1-->
+        <!--<com.google.protobuf.java.version>2.4.1</com.google.protobuf.java.version>-->
+        <com.google.protobuf.java.version>3.5.1</com.google.protobuf.java.version>
+
+        <!--jack json 较低版本会导致bug 出现；todo：版本问题待确认-->
+        <jackson-annotations.version>2.9.0</jackson-annotations.version>
+        <jackson-databind.version>2.9.0</jackson-databind.version>
+        <jackson-core.version>2.9.0</jackson-core.version>
+
+        <httpclient.version>4.5.4</httpclient.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
+
+        <druid.version>1.1.9</druid.version>
+
+        <druid.version>1.1.9</druid.version>
+
+
+        <mybatis.plus.version>2.2.0</mybatis.plus.version>
+
+        <shiro.spring.version>1.4.0</shiro.spring.version>
+        <shiro.redis.version>3.1.0</shiro.redis.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <!--<version>Finchley.SR1</version>-->
+                <version>Dalston.SR4</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- ===================== 自定义项目版本版本控制依赖 start ===================== -->
+            <dependency>
+                <groupId>com.qijia</groupId>
+                <artifactId>qijia-framework</artifactId>
+                <version>${com.qijia.jar.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.qijia</groupId>
+                <artifactId>app-mybatis-plus-spring-boot-starter</artifactId>
+                <version>${com.qijia.jar.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.qijia</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${com.qijia.jar.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.qijia</groupId>
+                <artifactId>qijia-utils</artifactId>
+                <version>${com.qijia.jar.version}</version>
+            </dependency>
+
+            <!-- ===================== 自定义项目版本版本控制依赖 end  ===================== -->
+
+
+            <!-- =====================      spring boot  start      ===================== -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+                <version>${spring.boot.autoconfigure.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>${spring.boot.autoconfigure.version}</version>
+            </dependency>
+            <!-- =====================      spring boot  end        ===================== -->
+
+
+            <!-- ===================== 数据库相关依赖 start           ===================== -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${tk.mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${com.github.pagehelper.version}</version>
+            </dependency>
+            <!-- ===================== 数据库相关依赖 end             ===================== -->
+
+
+            <!-- =====================      netty start             ===================== -->
+            <!--此处netty 版本注意与redisson 中netty 冲突问题-->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${io.netty.version}</version>
+            </dependency>
+            <!-- =====================      netty end               ===================== -->
+
+
+            <!-- =====================      netty start             ===================== -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${org.redisson.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>io.netty</groupId>
+                        <artifactId>netty-bom</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!-- =====================      netty end               ===================== -->
+
+
+            <!-- =====================      LOG START               ===================== -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${org.slf4j.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${org.slf4j.log4j12.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <!-- =====================      LOG END                 ===================== -->
+
+
+            <!-- =====================      GOOGLE PROTOBUF START   ===================== -->
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>${com.google.protobuf.java.version}</version>
+            </dependency>
+            <!-- =====================      GOOGLE PROTOBUF END     ===================== -->
+
+
+            <!-- ===================== Jackson Json处理工具包 start  ===================== -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson-annotations.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-databind.version}</version>
+            </dependency>
+            <!-- ===================== Jackson Json处理工具包 end    ===================== -->
+
+            <!-- =====================      httpclient start        ===================== -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+            <!-- =====================      httpclient end          ===================== -->
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <!-- =====================      druid start        ===================== -->
+
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!-- =====================      druid end          ===================== -->
+
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring</artifactId>
+                <version>${shiro.spring.version}</version>
+            </dependency>
+
+
+
+            <!--shiro-redis 依赖-->
+            <dependency>
+                <groupId>org.crazycake</groupId>
+                <artifactId>shiro-redis</artifactId>
+                <version>${shiro.redis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>1.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-core</artifactId>
+                <version>1.2.4</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.36</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.5.3</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!--<plugin>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--</plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

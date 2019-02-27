@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>qijia-parent</artifactId>
+        <groupId>com.qijia</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>qijia-upms</artifactId>
+    <name>qijia-upms</name>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <modules>
+        <module>qijia-upms-common</module>
+        <module>qijia-upms-dao</module>
+        <module>qijia-upms-model</module>
+        <module>qijia-upms-rpc-service</module>
+        <module>qijia-upms-server</module>
+        <module>qijia-upms-rpc-api</module>
+        <module>qijia-upms-client</module>
+    </modules>
+
+</project>

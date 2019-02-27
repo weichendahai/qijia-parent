@@ -6,9 +6,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="app-mybatis-plus-spring-boot-autoconfigure" />
+        <module name="app-mybatis-plus-srping-boot-autoconfiguer" />
+        <module name="druid-spring-boot-autoconfigure" />
+        <module name="qijia-common-redis" />
+        <module name="qijia-common-utils" />
         <module name="qijia-framework" />
-        <module name="qijia-spring-boot-starters-parent" />
-        <module name="qijia-utils" />
+        <module name="qijia-register-center" />
+        <module name="qijia-shop-admin" />
+        <module name="qijia-upms-client" />
+        <module name="qijia-upms-common" />
+        <module name="qijia-upms-dao" />
+        <module name="qijia-upms-model" />
+        <module name="qijia-upms-rpc-api" />
+        <module name="qijia-upms-rpc-service" />
+        <module name="qijia-upms-server" />
+        <module name="rabbitmq-api" />
+        <module name="rabbitmq-spring" />
+        <module name="rabbitmq-springboot-consumer" />
+        <module name="rabbitmq-springboot-producer" />
+        <module name="shiro-login-web" />
         <module name="shop-admin-api" />
         <module name="shop-admin-common" />
         <module name="shop-admin-dao" />
@@ -17,24 +34,64 @@
         <module name="shop-admin-sdk" />
         <module name="shop-admin-views" />
         <module name="shop-admin-web" />
+        <module name="shop-admin-work" />
+        <module name="shop-code-generator" />
+        <module name="shop-demo" />
+        <module name="shop-login" />
+        <module name="shop-test" />
         <module name="tools-parent" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="qijia-framework" target="1.5" />
-      <module name="qijia-parent" target="1.5" />
-      <module name="qijia-spring-boot-starters-parent" target="1.5" />
-      <module name="qijia-utils" target="1.5" />
-      <module name="shop-admin" target="1.5" />
-      <module name="shop-admin-api" target="1.5" />
-      <module name="shop-admin-common" target="1.5" />
-      <module name="shop-admin-dao" target="1.5" />
-      <module name="shop-admin-gateway" target="1.5" />
-      <module name="shop-admin-model" target="1.5" />
-      <module name="shop-admin-sdk" target="1.5" />
-      <module name="shop-admin-views" target="1.5" />
-      <module name="shop-admin-web" target="1.5" />
-      <module name="tools-parent" target="1.5" />
+      <module name="app-mybatis-plus-spring-boot-autoconfigure" target="1.8" />
+      <module name="app-mybatis-plus-spring-boot-starter" target="1.8" />
+      <module name="app-mybatis-plus-spring-boot-starter-parent" target="1.8" />
+      <module name="app-mybatis-plus-srping-boot-autoconfiguer" target="1.8" />
+      <module name="app-mybatis-plus-srping-boot-autoconfigure" target="1.8" />
+      <module name="app-mybatis-plus-srping-boot-starter" target="1.8" />
+      <module name="app-mybatis-plus-srping-boot-starter-parent" target="1.8" />
+      <module name="druid-spring-boot-autoconfigure" target="1.8" />
+      <module name="druid-spring-boot-starter" target="1.8" />
+      <module name="druid-spring-boot-starter-parent" target="1.8" />
+      <module name="qijia-common" target="1.8" />
+      <module name="qijia-common-redis" target="1.8" />
+      <module name="qijia-common-utils" target="1.8" />
+      <module name="qijia-framework" target="1.8" />
+      <module name="qijia-parent" target="1.8" />
+      <module name="qijia-rabbitmq" target="1.8" />
+      <module name="qijia-register-center" target="1.8" />
+      <module name="qijia-shop" target="1.8" />
+      <module name="qijia-shop-admin" target="1.8" />
+      <module name="qijia-spring-boot-starters-parent" target="1.8" />
+      <module name="qijia-upms" target="1.8" />
+      <module name="qijia-upms-client" target="1.8" />
+      <module name="qijia-upms-common" target="1.8" />
+      <module name="qijia-upms-dao" target="1.8" />
+      <module name="qijia-upms-model" target="1.8" />
+      <module name="qijia-upms-rpc-api" target="1.8" />
+      <module name="qijia-upms-rpc-service" target="1.8" />
+      <module name="qijia-upms-server" target="1.8" />
+      <module name="qijia-utils" target="1.8" />
+      <module name="rabbitmq-api" target="1.8" />
+      <module name="rabbitmq-spring" target="1.8" />
+      <module name="rabbitmq-springboot-consumer" target="1.8" />
+      <module name="rabbitmq-springboot-producer" target="1.8" />
+      <module name="shiro-login-web" target="1.8" />
+      <module name="shop-admin" target="1.8" />
+      <module name="shop-admin-api" target="1.8" />
+      <module name="shop-admin-common" target="1.8" />
+      <module name="shop-admin-dao" target="1.8" />
+      <module name="shop-admin-gateway" target="1.8" />
+      <module name="shop-admin-model" target="1.8" />
+      <module name="shop-admin-sdk" target="1.8" />
+      <module name="shop-admin-views" target="1.8" />
+      <module name="shop-admin-web" target="1.8" />
+      <module name="shop-admin-work" target="1.8" />
+      <module name="shop-code-generator" target="1.8" />
+      <module name="shop-demo" target="1.8" />
+      <module name="shop-login" target="1.8" />
+      <module name="shop-test" target="1.8" />
+      <module name="tools-parent" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

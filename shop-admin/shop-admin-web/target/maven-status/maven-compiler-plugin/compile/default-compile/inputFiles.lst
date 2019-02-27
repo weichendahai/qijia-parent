@@ -1,0 +1,8 @@
+/Users/weichen/work/java_workspace/qijia-parent/shop-admin/shop-admin-web/src/main/java/com/qijia/shop/admin/web/vo/response/UserResp.java
+/Users/weichen/work/java_workspace/qijia-parent/shop-admin/shop-admin-web/src/main/java/com/qijia/shop/admin/web/controller/UserController.java
+/Users/weichen/work/java_workspace/qijia-parent/shop-admin/shop-admin-web/src/main/java/com/qijia/shop/admin/web/vo/converter/UserConverter.java
+/Users/weichen/work/java_workspace/qijia-parent/shop-admin/shop-admin-web/src/main/java/com/qijia/shop/admin/web/config/RedisConfiguration.java
+/Users/weichen/work/java_workspace/qijia-parent/shop-admin/shop-admin-web/src/main/java/com/qijia/shop/admin/web/enums/MyEnumTest.java
+/Users/weichen/work/java_workspace/qijia-parent/shop-admin/shop-admin-web/src/main/java/com/qijia/shop/admin/web/vo/request/UserReq.java
+/Users/weichen/work/java_workspace/qijia-parent/shop-admin/shop-admin-web/src/main/java/com/qijia/shop/admin/web/service/UserService.java
+/Users/weichen/work/java_workspace/qijia-parent/shop-admin/shop-admin-web/src/main/java/com/qijia/shop/admin/web/service/impl/UserServiceImpl.java

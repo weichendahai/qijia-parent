@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qijia.upms.dao.UpmsOrganizationDao">
+
+	<!--基础返回结果-->
+	<resultMap id="BaseResultMap" type="com.qijia.upms.model.UpmsOrganization">
+		<id property="id" column="id" jdbcType="INTEGER"/>
+		<result property="pid" column="pid" jdbcType="INTEGER"/>
+		<result property="name" column="name" jdbcType="VARCHAR"/>
+		<result property="description" column="description" jdbcType="VARCHAR"/>
+		<result property="createTime" column="create_time" jdbcType="BIGINT"/>
+		<result property="updateTime" column="update_time" jdbcType="BIGINT"/>
+	</resultMap>
+
+	<!-- 查询条件 -->
+    <sql id="Base_Where_Clause">
+    	where 1=1
+    	<trim  suffixOverrides="," >
+			<if test="id != null and id != ''">
+				and id = #{id, jdbcType=INTEGER }
+			</if>
+			<if test="pid != null and pid != ''">
+				and pid = #{pid, jdbcType=INTEGER }
+			</if>
+			<if test="name != null and name != ''">
+				and name = #{name, jdbcType=VARCHAR }
+			</if>
+			<if test="description != null and description != ''">
+				and description = #{description, jdbcType=VARCHAR }
+			</if>
+			<if test="createTime != null and createTime != ''">
+				and create_time = #{createTime, jdbcType=BIGINT }
+			</if>
+			<if test="updateTime != null and updateTime != ''">
+				and update_time = #{updateTime, jdbcType=BIGINT }
+			</if>
+		</trim>
+    </sql>
+
+	<!--添加-->
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id"
+		parameterType="com.qijia.upms.model.UpmsOrganization">
+		insert into upms_organization
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="pid != null">
+				pid,
+			</if>
+			<if test="name != null">
+				name,
+			</if>
+			<if test="description != null">
+				description,
+			</if>
+			<if test="createTime != null">
+				create_time,
+			</if>
+			<if test="updateTime != null">
+				update_time,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id, jdbcType=INTEGER},
+			</if>
+			<if test="pid != null">
+				#{pid, jdbcType=INTEGER},
+			</if>
+			<if test="name != null">
+				#{name, jdbcType=VARCHAR},
+			</if>
+			<if test="description != null">
+				#{description, jdbcType=VARCHAR},
+			</if>
+			<if test="createTime != null">
+				#{createTime, jdbcType=BIGINT},
+			</if>
+			<if test="updateTime != null">
+				#{updateTime, jdbcType=BIGINT},
+			</if>
+		</trim>
+	</insert>
+
+	<!--删除-->
+	<delete id="delete" parameterType="Object">
+		delete from upms_organization
+		where
+		id = #{id}
+	</delete>
+
+	<!--修改-->
+	<update id="update" parameterType="com.qijia.upms.model.UpmsOrganization">
+		update upms_organization
+		<set>
+			<if test="pid != null">
+				pid = #{pid, jdbcType=INTEGER },
+			</if>
+			<if test="name != null">
+				name = #{name, jdbcType=VARCHAR },
+			</if>
+			<if test="description != null">
+				description = #{description, jdbcType=VARCHAR },
+			</if>
+			<if test="createTime != null">
+				create_time = #{createTime, jdbcType=BIGINT },
+			</if>
+			<if test="updateTime != null">
+				update_time = #{updateTime, jdbcType=BIGINT },
+			</if>
+		</set>
+		where
+		id = #{id}
+	</update>
+
+	<!-- 用于select查询公用抽取的列 -->
+	<sql id="Base_Column_List">
+		id,pid,name,description,create_time,update_time
+	</sql>
+
+	<!--根据Id查询-->
+	<select id="queryById" parameterType="int" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from upms_organization
+		where
+		id = #{id}
+	</select>
+
+	<!--根据model 查询-->
+    <select id="queryOne" resultMap="BaseResultMap"  parameterType="Object">
+        select <include refid="Base_Column_List"/>
+        from upms_organization
+        <include refid="Base_Where_Clause"/>
+        limit 1
+    </select>
+
+	<!--根据model 查询; 返回list 结果-->
+    <select id="queryByObject" resultMap="BaseResultMap"  parameterType="Object">
+        select <include refid="Base_Column_List"/>
+        from upms_organization
+        <include refid="Base_Where_Clause"/>
+    </select>
+
+	<!--查询全部-->
+	<select id="queryAll" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from upms_organization
+	</select>
+
+	<!--
+    查询条件;根据具体业务逻辑实现查询；默认查询条件与字段名字相同；保存至map
+    例如
+        Map<String, Object> filter = new HashMap<String, Object>();
+        filter.put("id", localeRequest.getId());
+        filter.put("name", localeRequest.getName());
+     -->
+	<sql id="Filter_Where_Clause">
+		where 1=1
+		<trim  suffixOverrides="," >
+			<if test="id != null and id != ''">
+				and id = #{id, jdbcType=INTEGER }
+			</if>
+			<if test="pid != null and pid != ''">
+				and pid = #{pid, jdbcType=INTEGER }
+			</if>
+			<if test="name != null and name != ''">
+				and name = #{name, jdbcType=VARCHAR }
+			</if>
+			<if test="description != null and description != ''">
+				and description = #{description, jdbcType=VARCHAR }
+			</if>
+			<if test="create_time != null and create_time != ''">
+				and create_time = #{create_time, jdbcType=BIGINT }
+			</if>
+			<if test="update_time != null and update_time != ''">
+				and update_time = #{update_time, jdbcType=BIGINT }
+			</if>
+		</trim>
+	</sql>
+
+	<!--根据map 查询条件查询-->
+	<select id="queryByList" resultMap="BaseResultMap"  parameterType="java.util.Map">
+		select <include refid="Base_Column_List"/>
+		from upms_organization
+		<include refid="Filter_Where_Clause"/>
+	</select>
+</mapper>
